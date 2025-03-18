@@ -308,13 +308,17 @@ llama-cli -m ./EXAONE-Deep-7.8B-BF16.gguf \
 
 ### Ollama
 
-You can create and run EXAONE Deep models with GGUF format for customizing.
+You can run EXAONE Deep models with Ollama.
 
 1. Install Ollama. Please refer to the [Ollama repository](https://github.com/ollama/ollama) for more details.
 
-2. Download EXAONE Deep model in GGUF format. Please refer to the [GGUF section](#gguf) for more details.
+2. Run ```ollama run omercelik/exaone-deep:7.8b```. You can also use ```omercelik/exaone-deep:2.4b``` or ```omercelik/exaone-deep:32b```.
 
-3. Write the `Modelfile` for EXAONE Deep.
+Alternatively, you can create and run EXAONE Deep models with GGUF format for customizing.
+
+1. Download EXAONE Deep model in GGUF format. Please refer to the [GGUF section](#gguf) for more details.
+
+2. Write the `Modelfile` for EXAONE Deep.
 
 ```text
 # Model path (choose appropriate GGUF weights on your own)
@@ -348,12 +352,12 @@ SYSTEM """"""
 LICENSE """EXAONE AI Model License Agreement 1.1 - NC """
 ```
 
-4. Convert the model to Ollama.
+3. Convert the model to Ollama.
 ```bash
 ollama create exaone -f Modelfile
 ```
 
-3. Run the model with Ollama.
+4. Run the model with Ollama.
 ```bash
 ollama run exaone
 ```
